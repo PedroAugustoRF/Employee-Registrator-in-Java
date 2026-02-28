@@ -1,30 +1,30 @@
-📋 Sistema de Cadastro de Funcionários
-<p align="center"> <img src="https://img.shields.io/badge/Java-POO-orange?style=for-the-badge&logo=java" /> <img src="https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge" /> <img src="https://img.shields.io/badge/Nível-Educacional-blue?style=for-the-badge" /> </p>
-📖 Sobre o Projeto
+---
 
-O Sistema de Cadastro de Funcionários é uma aplicação desenvolvida em Java, com foco na prática dos principais conceitos de Programação Orientada a Objetos (POO).
+# 📋 Sistema de Cadastro de Funcionários
 
-O sistema permite cadastrar funcionários comuns e terceirizados, realizando o cálculo automático de seus pagamentos com base nas regras específicas de cada tipo.
+## 📌 Descrição
 
-Este projeto foi desenvolvido com objetivo educacional e aprimoramento de lógica e modelagem de classes.
+O **Sistema de Cadastro de Funcionários** é uma aplicação em **Java** desenvolvida com o objetivo de aplicar conceitos fundamentais de **Programação Orientada a Objetos (POO)**.
 
-🧠 Conceitos Aplicados
+O sistema permite cadastrar funcionários comuns e terceirizados, calculando automaticamente seus respectivos pagamentos com base nas regras definidas para cada tipo.
 
-✔️ Encapsulamento
+---
 
-✔️ Herança
+## 🧠 Conceitos de POO Aplicados
 
-✔️ Polimorfismo
+* Encapsulamento
+* Herança
+* Polimorfismo
+* Sobrescrita de métodos (`@Override`)
+* Organização em pacotes
+* Uso de `ArrayList`
+* Entrada de dados com `Scanner`
 
-✔️ Sobrescrita de métodos (@Override)
+---
 
-✔️ Modularização em pacotes
+## 🏗️ Estrutura do Projeto
 
-✔️ Uso de Listas (ArrayList)
-
-✔️ Entrada de dados com Scanner
-
-🏗️ Estrutura do Projeto
+```
 cadastroFuncionarios
 │
 ├── application
@@ -33,58 +33,73 @@ cadastroFuncionarios
 └── entities
     ├── Funcionario.java
     └── FuncionarioTerceirizado.java
-📂 application
+```
 
-Responsável pela execução do sistema.
+### 🔹 application
 
-App.java → Classe principal com método main, onde ocorre a interação com o usuário.
+Contém a classe principal responsável pela execução do sistema.
 
-📂 entities
+* `App.java` → Classe com o método `main`, responsável pela interação com o usuário.
 
-Camada de entidades (modelo de domínio).
+### 🔹 entities
 
-Funcionario.java → Classe base contendo atributos e método de cálculo de pagamento.
+Contém as classes de domínio do sistema.
 
-FuncionarioTerceirizado.java → Classe que herda de Funcionario e adiciona taxa adicional no pagamento.
+* `Funcionario.java` → Classe base com atributos e método de cálculo de pagamento.
+* `FuncionarioTerceirizado.java` → Classe que herda de `Funcionario` e adiciona taxa extra ao pagamento.
 
-⚙️ Funcionalidades
+---
 
-🔹 Cadastro de múltiplos funcionários
-🔹 Identificação de funcionário terceirizado
-🔹 Cálculo automático de pagamento
-🔹 Exibição do pagamento final formatado
+## ⚙️ Funcionalidades
 
-💻 Regras de Negócio
-🧾 Funcionário Comum
+* Cadastro de múltiplos funcionários
+* Identificação de funcionário terceirizado
+* Cálculo automático do pagamento
+* Exibição formatada do pagamento final
 
-Pagamento calculado por:
+---
 
-horasTrabalhadas × valorPorHora
-🏢 Funcionário Terceirizado
+## 💰 Regras de Negócio
 
-Pagamento calculado por:
+### Funcionário Comum
 
-(horasTrabalhadas × valorPorHora) + adicional * 1.1
+```
+pagamento = horasTrabalhadas × valorPorHora
+```
 
-(O adicional recebe acréscimo de 10%)
+### Funcionário Terceirizado
 
-▶️ Como Executar o Projeto
-✅ Pré-requisitos
+```
+pagamento = (horasTrabalhadas × valorPorHora) + (adicional × 1.1)
+```
 
-Java JDK 8 ou superior
+O adicional recebe um acréscimo de 10%.
 
-IDE (Eclipse, IntelliJ, VS Code) ou terminal
+---
 
-🚀 Executando via terminal
+## ▶️ Como Executar
 
-1️⃣ Compile:
+### Pré-requisitos
 
+* Java JDK 8 ou superior
+
+### Compilação
+
+```
 javac application/App.java
+```
 
-2️⃣ Execute:
+### Execução
 
+```
 java application.App
-🖥️ Exemplo de Execução
+```
+
+---
+
+## 🖥️ Exemplo de Execução
+
+```
 Enter the number of employees: 2
 
 Employee #1 data:
@@ -103,32 +118,35 @@ Additional charge: 200.00
 PAYMENTS:
 João - $2000.00
 Carlos - $2300.00
-🚀 Objetivo do Projeto
+```
 
-Este projeto foi desenvolvido para:
+---
 
-Praticar modelagem orientada a objetos
+## 🎯 Objetivo
 
-Trabalhar com herança e polimorfismo
+Este projeto foi desenvolvido com foco em:
 
-Organizar código em pacotes
+* Praticar modelagem orientada a objetos
+* Aplicar herança e polimorfismo na prática
+* Melhorar organização e estruturação de código
+* Simular uma regra de negócio simples
 
-Simular uma regra de negócio real
+---
 
-🔮 Melhorias Futuras
+## 🚀 Melhorias Futuras
 
-Implementar persistência de dados (arquivo ou banco de dados)
+* Validação de dados de entrada
+* Persistência em arquivo ou banco de dados
+* Interface gráfica
+* Implementação de testes unitários
+* Aplicação do padrão MVC
 
-Criar interface gráfica
+---
 
-Adicionar validações de entrada
-
-Aplicar padrão MVC
-
-Implementar testes unitários
-
-👨‍💻 Autor
+## 👨‍💻 Autor
 
 Pedro Augusto Ribeiro Ferreira
 
-📌 Projeto desenvolvido para fins educacionais e aprimoramento técnico.
+Projeto desenvolvido para fins educacionais e aprimoramento técnico.
+
+---
